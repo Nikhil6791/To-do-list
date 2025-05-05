@@ -1,0 +1,103 @@
+body{
+    height: 100%;
+    width: 100%;
+}
+
+.main{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    min-height: 300px;
+    width: 600px;
+    border: 1px solid gray;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    border-radius: 12px;
+    background-color: rgb(199, 190, 190);
+    padding: 45px;
+
+    
+}
+
+.task-content{
+    position: relative;
+    width: 80%;
+}
+
+.task-content button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 13.6px 18px;
+    border: none;
+    /* margin-top: 1px; */
+    margin-left: 45px;
+    border-radius: 50px;
+    background-color: #FF6439;
+    overflow: hidden;
+    color: white;
+
+}
+
+.circle{
+    height: 23px;
+    width: 23px;
+    border: 1px solid black;
+    border-radius: 100%;
+
+}
+
+.tick{
+    height: 23px;
+    width: 23px;
+    display: none;
+}
+
+.circle:hover .tick{
+    display: block;
+}
+
+.task-content input{
+    padding: 13px 46px;
+    border: none;
+    width: 80%;
+    border-radius: 15px;
+    border-top-right-radius: -50%;
+    border-bottom-right-radius: -50%;
+}
+
+
+
+.task-container{
+    height: 30px;
+    width: 80%;
+    margin-top: 34px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-direction: column; */
+}
+
+.task-container span{
+    font-size: 19px;
+}
+
+li{
+    list-style: none;
+}
+.cross{
+    height: 25px;
+    width: 23px;
+}
+
+
+
+input:focus{
+    outline: none;
+}
