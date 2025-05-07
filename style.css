@@ -1,103 +1,138 @@
-body{
-    height: 100%;
-    width: 100%;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
 }
 
-.main{
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.main {
+  height: 650px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
-.container{
-    min-height: 300px;
-    width: 600px;
-    border: 1px solid gray;
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    flex-direction: column;
-    border-radius: 12px;
-    background-color: rgb(199, 190, 190);
-    padding: 45px;
-
-    
+.container {
+  min-height: 300px;
+  width: 600px;
+  border: 1px solid gray;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 12px;
+  background-color: rgb(199, 190, 190);
+  padding: 45px;
 }
 
-.task-content{
-    position: relative;
-    width: 80%;
+.task-content {
+  position: relative;
+  width: 80%;
 }
 
-.task-content button{
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 13.6px 18px;
-    border: none;
-    /* margin-top: 1px; */
-    margin-left: 45px;
-    border-radius: 50px;
-    background-color: #FF6439;
-    overflow: hidden;
-    color: white;
+.task-content button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 13.6px 18px;
+  border: none;
 
+  margin-left: 45px;
+  border-radius: 50px;
+  background-color: #ff6439;
+  overflow: hidden;
+  color: white;
 }
 
-.circle{
-    height: 23px;
-    width: 23px;
-    border: 1px solid black;
-    border-radius: 100%;
-
+.circle {
+  height: 23px;
+  width: 23px;
+  border: 1px solid black;
+  border-radius: 100%;
 }
 
-.tick{
-    height: 23px;
-    width: 23px;
-    display: none;
+.task-added {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.circle:hover .tick{
-    display: block;
+.tick {
+  height: 23px;
+  width: 23px;
+  display: none;
 }
 
-.task-content input{
-    padding: 13px 46px;
-    border: none;
-    width: 80%;
-    border-radius: 15px;
-    border-top-right-radius: -50%;
-    border-bottom-right-radius: -50%;
+.circle:hover .tick {
+  display: block;
 }
 
-
-
-.task-container{
-    height: 30px;
-    width: 80%;
-    margin-top: 34px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* flex-direction: column; */
+.message-box {
+  padding: 4px 12px;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 2%;
+  bottom: 0%;
+  height: 28px;
+  width: 10%;
+  position: absolute;
 }
 
-.task-container span{
-    font-size: 19px;
+.message {
+  height: 35px;
+  padding: 5px 12px;
+  border-radius: 12px;
+  text-align: center;
+  width: fit-content;
+  display: none;
+  background-color: rgb(31, 31, 31);
+  color: white;
 }
 
-li{
-    list-style: none;
-}
-.cross{
-    height: 25px;
-    width: 23px;
+.message.show {
+  display: block;
 }
 
+.task-content input {
+  padding: 13px 46px;
+  border: none;
+  width: 80%;
+  border-radius: 15px;
+  border-top-right-radius: -50%;
+  border-bottom-right-radius: -50%;
+}
 
+.task-container {
+  height: 30px;
+  width: 80%;
+  margin-top: 34px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* flex-direction: column; */
+}
 
-input:focus{
-    outline: none;
+.task-container span {
+  font-size: 19px;
+}
+
+li {
+  list-style: none;
+}
+
+.cross {
+  height: 25px;
+  width: 23px;
+}
+
+input:focus {
+  outline: none;
 }
